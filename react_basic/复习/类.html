@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script type="text/javascript">
+        class Person {
+            
+            constructor(name, age) {
+                this.name = name;
+                this.age = age;
+            }
+
+            spek() {
+                console.log(`我叫${this.name}，我年龄是${this.age}`)
+            }
+        }
+        const p1 = new Person('tom', 18)
+        const p2 = new Person('tom', 19)
+        console.log(p1)
+        p1.spek();
+        p2.spek();
+        class Studeng extends Person {
+            constructor(name, age, grade) {
+                super(name, age)
+                this.grade = grade
+            }
+
+            spek() {
+                console.log(`我叫${this.name}，我年龄是${this.age}，我是来自${this.grade}`)
+            }
+        }
+        const s1 = new Studeng('zbc', 12, '常宁')
+        console.log(s1)
+        console.log(s1.grade)
+        s1.spek();
+    </script>
+</body>
+</html>
